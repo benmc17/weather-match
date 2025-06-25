@@ -1,0 +1,37 @@
+{
+  "name": "activity-ranking-api",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "build": "pnpm lint && tsc",
+    "dev": "ts-node ./src/app.ts",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint ./src/**/*.ts"
+  },
+  "author": "Ben McGiveron",
+  "description": "This application provides the Activity Ranking API for the Weather Matcher application. Weather Matcher is an intelligent web application that ranks and recommends activities based on real-time weather conditions for any chosen location.",
+  "devDependencies": {
+    "@eslint/js": "^9.29.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
+    "eslint": "^9.29.0",
+    "jest": "^30.0.2",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.35.0"
+  },
+  "dependencies": {
+    "axios": "^1.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "graphql": "^16.11.0",
+    "graphql-http": "^1.22.4",
+    "graphql-playground-middleware-express": "^1.7.23",
+    "yup": "^1.6.1"
+  }
+}
