@@ -28,6 +28,6 @@ console.log(`
 
 try {
     startApplication()
-} catch (err: any) {
-    console.error(`Failed to start the Activity Ranking API: ${err.message}`);
+} catch (error: unknown) {
+    console.error(`Failed to start the Activity Ranking API: ${error}`);
 }

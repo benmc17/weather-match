@@ -8,7 +8,7 @@ const determineHighestSuitabilityScores = (activities: Activity[], weatherCondit
     const suitabilityScores = []
 
     // This algorithm could be improved by using a more complex scoring system, but for now we will just use the highest suitability score for each activity
-    for (let activity of activities) {
+    for (const activity of activities) {
         const suitableWeather = activity.suitableWeather.filter(s => weatherConditions.includes(s.weather));
         const highestScore = suitableWeather.reduce((max, current) => Math.max(max, current.suitabilityScore), 0);
         suitabilityScores.push({

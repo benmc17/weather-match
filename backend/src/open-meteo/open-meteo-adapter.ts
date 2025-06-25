@@ -49,7 +49,7 @@ export class OpenMeteoAdapter implements WeatherDataProviderPort {
         try {
             const response = await axios.get(url);
             return response.data as T;
-        } catch (error: any) {
+        } catch (error: unknown) {
             throw new Error(`Error fetching Open Meteo API data: ${error}`);
         }
     }

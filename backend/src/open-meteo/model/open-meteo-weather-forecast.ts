@@ -1,4 +1,4 @@
-export type OpenMeteoWeatherForecast = {
+export interface OpenMeteoWeatherForecast {
     latitude: number;
     longitude: number;
     generationtime_ms: number;
