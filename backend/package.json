@@ -2,7 +2,6 @@
   "name": "activity-ranking-api",
   "version": "1.0.0",
   "private": true,
-  "main": "index.js",
   "scripts": {
     "build": "pnpm lint && tsc",
     "dev": "ts-node ./src/app.ts",

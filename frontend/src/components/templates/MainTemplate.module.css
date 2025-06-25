@@ -1,0 +1,17 @@
+.page {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    margin: 25px;
+}
+
+.main > div {
+    width: 50vw;
+    height: 50vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

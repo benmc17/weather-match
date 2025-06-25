@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  activity-ranking-api:
+    build:
+      context: ./backend
+      dockerfile: dockerfile
+    container_name: activity-ranking-api
+    environment:
+      PORT: 8081
+    ports:
+      - "8081:8081"
+
+  weather-matcher-ui:
+    build:
+      context: ./frontend
+      dockerfile: dockerfile
+    container_name: weather-matcher-ui
+    environment:
+      ACTIVITY_RANKING_API_HOST: http://activity-ranking-api:8081
+    ports:
+      - "3000:3000"
