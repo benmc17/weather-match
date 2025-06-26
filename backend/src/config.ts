@@ -11,7 +11,7 @@ export const config = {
         pricipitationMm: parseInt(process.env.THRESHOLD_PRECIPITATION_MM ?? "10"),
         windSpeedKmh: parseInt(process.env.THRESHOLD_WINDSPEED_KMH ?? "20"),
         snowfallCm: parseInt(process.env.THRESHOLD_SNOWFALL_CM ?? "5"),
-        sunshineDurationSec: parseInt(process.env.THRESHOLD_SUNSHINE_DURATION_SEC ?? "21600") // 6 hours in seconds,
+        sunshineDurationSec: parseInt(process.env.THRESHOLD_SUNSHINE_DURATION_SEC ?? "28800") // 8 hours in seconds,
     },
     elevationThresholds: {
         lowElevationM: parseInt(process.env.THRESHOLD_LOW_ELEVATION_M ?? "10"),

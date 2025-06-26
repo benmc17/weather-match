@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import styles from "./DropDownBox.module.css";
 
 export type Option = { id: number, display: string, value: string, meta: any }
 
-export default ({ onSelect, options }: { onSelect: (option: Option) => void, options: Option[] }) => (
+const DropDownBox = ({ onSelect, options }: { onSelect: (option: Option) => void, options: Option[] }) => (
     <ul className={styles.dropdown}>
         {options.map(option => (
             <li
@@ -15,4 +16,4 @@ export default ({ onSelect, options }: { onSelect: (option: Option) => void, opt
         ))}
     </ul>
 )
-
+export default DropDownBox

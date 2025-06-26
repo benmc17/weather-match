@@ -1,6 +1,6 @@
 import styles from "./TextBox.module.css";
 
-export default ({ 
+const TextBox = ({ 
     value, 
     placeholder = "Enter text...", 
     onChange 
@@ -23,3 +23,4 @@ export default ({
         </div>
     )
 }
+export default TextBox

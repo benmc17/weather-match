@@ -1,0 +1,11 @@
+.paragraph {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  font-family: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 16px 0;
+  transition: color 0.2s;
+}

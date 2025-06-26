@@ -3,7 +3,7 @@ import TextBox from "../atoms/TextBox"
 import { useCallback, useEffect, useState } from "react";
 import DropDownBox, { Option } from "../atoms/DropDownBox";
 
-export default ({ placeholder, options, onChange, onSelect } : { placeholder: string, options: Option[], onChange: (newValue: string) => void, onSelect: (selected: Option) => void }) => {
+const DropDownSelector = ({ placeholder, options, onChange, onSelect } : { placeholder: string, options: Option[], onChange: (newValue: string) => void, onSelect: (selected: Option) => void }) => {
     const [value, setValue] = useState("");
     const [showDropdown, setShowDropdown] = useState(false);
 
@@ -32,3 +32,4 @@ export default ({ placeholder, options, onChange, onSelect } : { placeholder: st
         </div>
     )
 }
+export default DropDownSelector

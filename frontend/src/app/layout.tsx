@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "Weather Matcher is an intelligent web application that ranks and recommends activities based on real-time weather conditions for any chosen location.",
 };
 
-export default ({
+const Layout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -30,3 +30,4 @@ export default ({
     </html>
   );
 }
+export default Layout

@@ -2,6 +2,9 @@ FROM node:20.19.3-alpine AS builder
 
 WORKDIR /app
 
+ARG NEXT_PUBLIC_OPEN_METEO_API_HOST
+ENV NEXT_PUBLIC_OPEN_METEO_API_HOST=$NEXT_PUBLIC_OPEN_METEO_API_HOST
+
 COPY package.json pnpm-lock.yaml ./
 RUN npm install -g pnpm
 

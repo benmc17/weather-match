@@ -8,6 +8,8 @@ services:
     container_name: activity-ranking-api
     environment:
       PORT: 8081
+      OPEN_METEO_WEATHER_HOST: https://api.open-meteo.com
+      OPEN_METEO_MARINE_HOST: https://marine-api.open-meteo.com/
     ports:
       - "8081:8081"
 
@@ -15,6 +17,8 @@ services:
     build:
       context: ./frontend
       dockerfile: dockerfile
+      args:
+        NEXT_PUBLIC_OPEN_METEO_API_HOST: https://geocoding-api.open-meteo.com
     container_name: weather-matcher-ui
     environment:
       ACTIVITY_RANKING_API_HOST: http://activity-ranking-api:8081

@@ -4,7 +4,7 @@ import { Option } from "../atoms/DropDownBox";
 import { searchForLocation } from "../../helpers/open-meteo-helper";
 import { OpenMeteoLocation } from "@/helpers/open-meteo-location";
 
-export default ({ onSelect }: { onSelect: (selected: Option) => Promise<void> }) => {
+const LocationLookup = ({ onSelect }: { onSelect: (selected: Option) => Promise<void> }) => {
     const [options, setOptions] = useState<Option[]>([])
     
     const onDropDownSelectorChange = useCallback(async (value: string) => {
@@ -35,3 +35,4 @@ export default ({ onSelect }: { onSelect: (selected: Option) => Promise<void> })
         />
     )
 }
+export default LocationLookup
