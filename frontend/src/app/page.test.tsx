@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Page from './page';
@@ -15,7 +16,7 @@ jest.mock('../components/organisms/LocationLookup', () => ({
 
 jest.mock('../components/organisms/LocationLookupResults', () => ({
   __esModule: true,
-  default: ({ selectedLocation }: { selectedLocation: any }) => (
+  default: () => (
     <div data-testid="location-lookup-results">LocationLookupResults</div>
   ),
 }));

@@ -51,7 +51,7 @@ const LocationLookupResults = ({ selectedLocation }: { selectedLocation: Option}
             }
         };
         fetchData();
-    }, [])
+    }, [selectedLocation])
 
     return (
         <div>

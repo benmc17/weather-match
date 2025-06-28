@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import LocationLookup from './LocationLookup';
 import { OpenMeteoLocation } from '../../helpers/open-meteo-location';

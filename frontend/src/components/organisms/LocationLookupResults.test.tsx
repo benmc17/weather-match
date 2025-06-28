@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { act, render, screen, waitFor } from '@testing-library/react'
 import LocationLookupResults from './LocationLookupResults'
 import { Option } from '../atoms/DropDownBox'
