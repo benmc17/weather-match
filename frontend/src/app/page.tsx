@@ -1,11 +1,11 @@
 'use client'
 
-import LocationLookup from "@/components/organisms/LocationLookup"
-import MainTemplate from "@/components/templates/MainTemplate"
+import LocationLookup from "../components/organisms/LocationLookup"
+import MainTemplate from "../components/templates/MainTemplate"
 import { useCallback, useState } from "react"
 import { Option } from "../components/atoms/DropDownBox";
-import PageHeader from "@/components/atoms/PageHeader";
-import LocationLookupResults from "@/components/organisms/LocationLookupResults";
+import PageHeader from "../components/atoms/PageHeader";
+import LocationLookupResults from "../components/organisms/LocationLookupResults";
 
 const Page = () => {
     const [selectedLocation, setSelectedLocation] = useState<Option | null>(null)

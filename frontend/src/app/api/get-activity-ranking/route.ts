@@ -1,12 +1,8 @@
-'use server'
+import { config } from '../../../config'
 
-import { config } from '../config'
-import { ActivityRankingResponse } from './get-activity-ranking-response'
-
-export const getActivityRanking = async (formData: FormData): Promise<ActivityRankingResponse> => {
-    const lat = formData.get("lat")
-    const long = formData.get("long")
-    const timeframeDays = config.timeframeDays;
+export async function POST(request: Request) {
+    const body = await request.json();
+    const { lat, long, timeframeDays } = body;
 
     const query = `
         query GetRankByWeather($lat: Float!, $long: Float!, $timeframeDays: Int!) {
@@ -37,5 +33,8 @@ export const getActivityRanking = async (formData: FormData): Promise<ActivityRa
     });
 
     const data = await response.json()
-    return data.data.rankByWeather
+    return new Response(JSON.stringify(data.data.rankByWeather), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' }
+    });
 }

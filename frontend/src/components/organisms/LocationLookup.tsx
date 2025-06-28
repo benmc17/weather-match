@@ -2,7 +2,7 @@ import { useCallback, useState } from "react";
 import DropDownSelector from "../molecules/DropDownSelector";
 import { Option } from "../atoms/DropDownBox";
 import { searchForLocation } from "../../helpers/open-meteo-helper";
-import { OpenMeteoLocation } from "@/helpers/open-meteo-location";
+import { OpenMeteoLocation } from "../../helpers/open-meteo-location";
 
 const LocationLookup = ({ onSelect }: { onSelect: (selected: Option) => Promise<void> }) => {
     const [options, setOptions] = useState<Option[]>([])

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Option } from "../atoms/DropDownBox";
-import { getActivityRanking } from "@/server-actions/get-activity-ranking";
-import { ActivityRankingResponse } from "@/server-actions/get-activity-ranking-response";
+import { ActivityRankingResponse } from "../../helpers/get-activity-ranking-response";
+import { getActivityRanking } from "../../helpers/activity-ranking-helper";
 import Paragraph from "../atoms/Paragraph";
 import { config } from '../../config'
 import ResultsBox from "../molecules/ResultsList";
@@ -40,15 +40,18 @@ const LocationLookupResults = ({ selectedLocation }: { selectedLocation: Option}
 
     useEffect(() => {
         const fetchData = async () => {
-            const formData = new FormData();
-            formData.append("lat", String(selectedLocation.meta.lat));
-            formData.append("long", String(selectedLocation.meta.long));
-            const results = await getActivityRanking(formData);
-            setResults(results)
-            setLoading(false)
+            const results = await getActivityRanking(
+                selectedLocation.meta.lat,
+                selectedLocation.meta.long
+            )
+
+            if (results) {
+                setResults(results)
+                setLoading(false)
+            }
         };
         fetchData();
-    }, [selectedLocation])
+    }, [])
 
     return (
         <div>
